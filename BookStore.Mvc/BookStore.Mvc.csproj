@@ -205,8 +205,12 @@
     <Compile Include="Mappings\IMapFrom.cs" />
     <Compile Include="Mappings\IMapTo.cs" />
     <Compile Include="Mappings\QueryableExtensions.cs" />
-    <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="ViewModels\AccountViewModels.cs" />
+    <Compile Include="ViewModels\Books\AddBooksinputModel.cs" />
+    <Compile Include="ViewModels\Books\AllBooksViewModel.cs" />
+    <Compile Include="ViewModels\Books\BookDetailsViewModel.cs" />
+    <Compile Include="ViewModels\Books\BooksViewModel.cs" />
+    <Compile Include="ViewModels\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
