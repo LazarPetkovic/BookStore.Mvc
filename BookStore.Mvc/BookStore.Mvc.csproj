@@ -319,11 +319,12 @@
     <Content Include="Views\Books\Details.cshtml" />
     <Content Include="Views\Books\AuthorDetails.cshtml" />
     <Content Include="Views\Authors\All.cshtml" />
+    <Content Include="Views\Error\Error400.cshtml" />
+    <Content Include="Views\Error\Error404.cshtml" />
+    <Content Include="Views\Error\Error500.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Book\" />
-    <Folder Include="Views\Error\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
