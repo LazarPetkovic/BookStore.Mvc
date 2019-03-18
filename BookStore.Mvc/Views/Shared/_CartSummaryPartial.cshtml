@@ -1,0 +1,20 @@
+﻿@model BookStore.Mvc.Areas.Private.ViewModels.ShoppingCartViewModel
+@if (Model != null)
+{
+    <a href="@Url.Action("Index", "ShoppingCart", new { area = "Private"})">
+        <span class="glyphicon glyphicon-shopping-cart"></span>
+        <span class="badge">
+            @Model.Cart.BookCarts.Count()
+        </span>
+        @if (Model.Cart.BookCarts.Count() == 0)
+        {
+            <span>Empty cart</span>
+        }
+        else
+        {
+            <span><strong>Total:</strong> @Model.Cart.GetCartTotal()</span>
+        }
+    </a>
+}
+
+
