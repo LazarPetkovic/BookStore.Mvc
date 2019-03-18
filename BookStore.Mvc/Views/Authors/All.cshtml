@@ -1,0 +1,32 @@
+﻿@model BookStore.Mvc.ViewModels.Authors.AllAuthorsViewModel
+@{
+    ViewBag.Title = "All";
+}
+<div class="div-box-body producers-background image-size">
+    <div class="container div-box-content">
+        <h2 class="text-center">Authors</h2>
+        <table class="table table-striped">
+            <tr>
+                <th class="text-center">
+                    @Html.ActionLink("Name", "All", new { sortOrder = ViewBag.NameSortParm })
+                </th>
+
+                <th class="text-center">
+                    @Html.ActionLink("Country", "All", new { sortOrder = ViewBag.CountrySortParm })
+                </th>
+            </tr>
+            @foreach (var item in Model.Authors)
+            {
+                <tr>
+                    
+                    <td class="text-center item">@Html.DisplayFor(m => item.Name)</td>
+                    <td class="text-center item">@Html.DisplayFor(m => item.Country)</td>
+                   
+                </tr>
+            }
+        </table>
+
+    </div>
+</div>
+
+
