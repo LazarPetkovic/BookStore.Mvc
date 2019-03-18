@@ -2,20 +2,17 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BookStore.Mvc.DataModel
 {
     public class Order
     {
 
-        private ICollection<BookCart> books;
+        private ICollection<BookCartItem> books;
 
         public Order()
         {
-            this.books = new HashSet<BookCart>();
+            this.books = new HashSet<BookCartItem>();
         }
 
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -42,7 +39,7 @@ namespace BookStore.Mvc.DataModel
         public virtual User User { get; set; }
 
 
-        public ICollection<BookCart> BookCartsItems
+        public ICollection<BookCartItem> BookCartsItems
         {
             get { return this.books; }
             set { this.books = value; }

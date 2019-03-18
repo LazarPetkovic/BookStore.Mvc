@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 
 namespace BookStore.Mvc.DataModel
 {
@@ -16,7 +12,7 @@ namespace BookStore.Mvc.DataModel
 
             if (item == null)
             {
-                var cartItem = new BookCart
+                var cartItem = new BookCartItem
                 {
                     Book = book,
                     Quantity = quantity

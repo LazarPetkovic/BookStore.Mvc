@@ -1,19 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BookStore.Mvc.DataModel
 {
     public partial class ShoppingCart
     {
-        private ICollection<BookCart> BookCartsItems;
+        private ICollection<BookCartItem> BookCartsItems;
 
         public ShoppingCart()
         {
-            this.BookCartsItems = new HashSet<BookCart>();
+            this.BookCartsItems = new HashSet<BookCartItem>();
         }
 
         [Key]
@@ -21,7 +17,7 @@ namespace BookStore.Mvc.DataModel
 
 
 
-        public ICollection<BookCart> BookCarts
+        public ICollection<BookCartItem> BookCarts
         {
             get { return this.BookCartsItems; }
             set { this.BookCartsItems = value; }
