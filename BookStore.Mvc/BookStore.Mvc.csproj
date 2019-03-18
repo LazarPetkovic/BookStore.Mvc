@@ -213,6 +213,7 @@
     <Compile Include="ViewModels\Books\AllBooksViewModel.cs" />
     <Compile Include="ViewModels\Books\BookDetailsViewModel.cs" />
     <Compile Include="ViewModels\Books\BooksViewModel.cs" />
+    <Compile Include="ViewModels\Categories\CategoryViewModel.cs" />
     <Compile Include="ViewModels\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
