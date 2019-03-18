@@ -315,11 +315,13 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="Views\Books\All.cshtml" />
+    <Content Include="Views\Books\Details.cshtml" />
+    <Content Include="Views\Books\AuthorDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Authors\" />
-    <Folder Include="Views\Books\" />
     <Folder Include="Views\Book\" />
     <Folder Include="Views\Error\" />
   </ItemGroup>

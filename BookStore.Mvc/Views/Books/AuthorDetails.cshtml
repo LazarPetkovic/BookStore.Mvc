@@ -1,0 +1,52 @@
+﻿@model BookStore.Mvc.ViewModels.Authors.AuthorDetailsViewModel
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="div-box-body product-details-background image-size enlarge">
+    <div class="container div-box-content">
+        <h2 class="text-center">Author Details</h2>
+        @if (this.TempData["Notification"] != null)
+        {
+            <div class="alert alert-success">@this.TempData["Notification"]</div>
+        }
+        <div class="col-md-4 img-container portrait">
+            <img src="@Url.Action("Image", "Books", new { id = Model.ImageId })" class="image-container" alt="@Model.Name" />
+        </div>
+        <div class="col-md-8">
+            <h1>
+                @Html.DisplayFor(m => Model.Name)
+            </h1>
+            <p>
+                @Html.Raw(Model.Description)
+            </p>
+            <table class="table">
+                <thead>
+                    <tr>
+
+                        <th class="text-center">Birth</th>
+                        <th class="text-center">Country</th>
+                        <th class="text-center">Number of Books</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-center">
+                            @Html.DisplayFor(m => Model.Birth)
+                        </td>
+                        <td class="text-center">
+                            @Html.DisplayFor(m => Model.Country)
+                        </td>
+                        <td class="text-center">
+                            @Html.DisplayFor(m => Model.Books)
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+

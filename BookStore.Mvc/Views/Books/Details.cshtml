@@ -1,0 +1,58 @@
+﻿@model BookStore.Mvc.ViewModels.Books.BookDetailsViewModel
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="div-box-body product-details-background image-size enlarge">
+    <div class="container div-box-content">
+        <h2 class="text-center">Book Details</h2>
+        @if (this.TempData["Notification"] != null)
+        {
+            <div class="alert alert-success">@this.TempData["Notification"]</div>
+        }
+        <div class="col-md-4 img-container portrait">
+            <img src="@Url.Action("Image", "Books", new { id = Model.ImageId })" class="image-container" alt="@Model.Name" />
+        </div>
+        <div class="col-md-8">
+            <h1>
+                @Html.DisplayFor(m => Model.Name)
+            </h1>
+            <p>
+                @Html.Raw(Model.Description)
+            </p>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="text-center">Category</th>
+                        <th class="text-center">Autohr</th>
+                        <th class="text-center">Price</th>
+                        <th class="text-center">Quantity</th>
+                        <th class="text-center">Rating</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-center">
+                            @Html.DisplayFor(m => Model.Category)
+                        </td>
+                        <td class="text-center">
+                            @Html.DisplayFor(m => Model.Author)
+                        </td>
+                        <td class="text-center">
+                            @Html.DisplayFor(m => Model.Price)
+                        </td>
+                        <td class="text-center">
+                            @Html.DisplayFor(m => Model.Quantity)
+                        </td>
+                        <td class="text-center">
+                            @Html.DisplayFor(m => Model.Rating)
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
