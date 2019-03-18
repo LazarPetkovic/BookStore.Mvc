@@ -199,6 +199,11 @@
     <Compile Include="Areas\Admin\Controllers\BooksAdminController.cs" />
     <Compile Include="Areas\Admin\ViewModels\AddAuthorViewModel.cs" />
     <Compile Include="Areas\Admin\ViewModels\AddBookViewModel.cs" />
+    <Compile Include="Areas\Private\Controllers\BaseController.cs" />
+    <Compile Include="Areas\Private\Controllers\OrdersController.cs" />
+    <Compile Include="Areas\Private\Controllers\ShoppingCartController.cs" />
+    <Compile Include="Areas\Private\ViewModels\MakeAnOrderViewModel.cs" />
+    <Compile Include="Areas\Private\ViewModels\ShoppingCartViewModel.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AuthorsController.cs" />
     <Compile Include="Controllers\BooksController.cs" />
@@ -263,6 +268,10 @@
     <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Admin\Views\AuthorAdmin\AddAuthor.cshtml" />
     <Content Include="Areas\Admin\Views\BooksAdmin\AddBook.cshtml" />
+    <Content Include="Areas\Private\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Private\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Private\Views\Orders\MakeOrder.cshtml" />
+    <Content Include="Areas\Private\Views\ShoppingCart\Index.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -335,6 +344,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Private\Views\Base\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -348,6 +358,10 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BookStore.Mvc.Common\BookStore.Mvc.Common.csproj">
+      <Project>{4F264AA7-C7D4-4589-A48B-6712F4144A76}</Project>
+      <Name>BookStore.Mvc.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BookStore.Mvc.DataModel\BookStore.Mvc.DataModel.csproj">
       <Project>{9A1C6713-B41F-4F1F-9050-95C2773FAF71}</Project>
       <Name>BookStore.Mvc.DataModel</Name>
